@@ -6,13 +6,13 @@ vim.o.background = "dark"
 
 local palette = {
     background = {
-        default = "NONE",
+        default = "None",
         float = "#2B2D3A",
-        popup = "#2B2D3A",
+        popup = "None",
         cursor = "#E2E2E3",
         selection = "#3E445E",
         highlight = "#333648",
-        separator = "#44475A",
+        separator = "#44475A", -- outlines
         subtle = "#363A4E",
     },
 
@@ -25,14 +25,14 @@ local palette = {
 
     syntax = {
         comment = "#7F8490",
-        keyword = "#FC5D7C",
+        keyword = "#DB424E",
         func = "#9ED072",
         variable = "#E2E2E3",
         parameter = "#E2E2E3",
-        member = "#FF00FF",
-        type = "#76CCE0",
+        member = "#F09559",
+        type = "#1DADC0",
         constant = "#EACB64",
-        string = "#EACB64",
+        string = "#B3C98A",
         number = "#EACB64",
         operator = "#FC5D7C",
         attribute = "#B39DF3",
@@ -40,13 +40,13 @@ local palette = {
         preprocessor = "#B39DF3",
     },
 
-    accent = {
-        primary = "#9ED072",
-        secondary = "#76CCE0",
-        interactive = "#76CCE0",
-        attention = "#EACB64",
-        special = "#FF00FF",
-    },
+	accent = {
+		primary = "#9ED072",
+		secondary = "#76CCE0",
+		interactive = "#6BBF59",
+		attention = "#2F4F8F",
+		special = "#B39DF3",
+	},
 
     diagnostic = {
         error = "#FC5D7C",
@@ -64,9 +64,9 @@ local palette = {
     },
 
     file = {
-        directory = "#f6CCE0",
-        executable = "#9ED072",
-        symlink = "#B39DF3",
+        directory = "#9ED072",
+        executable = "#FC5D7C",
+        symlink = "#1DADC0",
         marked = "#EACB64",
     },
 }
@@ -96,6 +96,7 @@ local highlights = {
     Whitespace        = { fg = p.background.subtle },
     Visual            = { bg = p.background.selection },
     Search            = { fg = p.background.cursor, bg = p.accent.attention },
+    CurSearch         = { fg = p.background.selection, bg = p.accent.interactive },
     IncSearch         = { fg = p.background.cursor, bg = p.diagnostic.warning, bold = true },
     MatchParen        = { fg = p.foreground.bright, bg = p.background.selection, bold = true },
     Pmenu             = { fg = p.foreground.primary, bg = p.background.popup },
@@ -275,6 +276,17 @@ local highlights = {
     BlinkCmpMenuSelection      = { fg = p.foreground.bright, bg = p.background.selection },
     BlinkCmpLabelMatch         = { fg = p.accent.primary, bold = true },
     BlinkCmpLabelDescription   = { fg = p.foreground.muted },
+
+	-- fzf
+	FzfLuaNormal = { fg = p.foreground.primary, bg = p.background.float },
+	FzfLuaBorder = { fg = p.background.separator, bg = p.background.float },
+	FzfLuaTitle = { fg = p.accent.primary, bold = true },
+	FzfLuaFzfNormal = { fg = p.foreground.primary, bg = p.background.float },
+	FzfLuaFzfCursorLine = { fg = p.foreground.bright, bg = p.background.highlight },
+	FzfLuaFzfMatch = { fg = p.accent.attention, bold = true },
+	FzfLuaFzfPrompt = { fg = p.accent.primary },
+	FzfLuaFzfPointer = { fg = p.accent.primary },
+	FzfLuaFzfMarker = { fg = p.diagnostic.success },
 
     -- Other plugins
     WhichKey                   = { fg = p.accent.primary },
