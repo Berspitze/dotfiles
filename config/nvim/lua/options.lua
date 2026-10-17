@@ -14,7 +14,7 @@ vim.opt.wrap = false
 -- search settings
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.g.netrw_sort_by = "name" 
+vim.g.netrw_sort_by = "name"
 
 -- highlights the line
 vim.opt.cursorline = true
