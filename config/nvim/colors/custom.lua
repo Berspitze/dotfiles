@@ -11,7 +11,7 @@ local palette = {
         popup = "None",
         cursor = "#E2E2E3",
         selection = "#3E445E",
-        highlight = "#333648",
+        highlight = "None",
         separator = "#44475A", -- outlines
         subtle = "#363A4E",
     },
@@ -95,7 +95,7 @@ local highlights = {
     Visual            = { bg = palette.background.selection },
     Search            = { fg = palette.background.cursor, bg = palette.accent.attention },
     CurSearch         = { fg = palette.background.selection, bg = palette.accent.interactive },
-    IncSearch         = { fg = palette.background.cursor, bg = palette.diagnostic.warning, bold = true },
+    IncSearch         = { fg = palette.background.cursor, bg = palette.accent.interactive, bold = true },
     MatchParen        = { fg = palette.foreground.bright, bg = palette.background.selection, bold = true },
     Pmenu             = { fg = palette.foreground.primary, bg = palette.background.popup },
     PmenuSel          = { fg = palette.foreground.bright, bg = palette.background.selection, bold = true },

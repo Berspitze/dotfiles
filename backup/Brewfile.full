@@ -1,0 +1,147 @@
+tap "asmvik/formulae"
+tap "randomplum/gtkwave"
+# Powerful expense tracker that lives in your terminal
+brew "bagels"
+# Yet another cross-platform graphical process/system monitor
+brew "bottom"
+# Low-level access to audio, keyboard, mouse, joystick, and graphics
+brew "sdl3"
+# Anti-virus software
+brew "clamav"
+# Statistics utility to count lines of code
+brew "cloc"
+# Development kit for the Java programming language
+brew "openjdk"
+# Pure Scala Artifact Fetching
+brew "coursier"
+# .NET Core
+brew "dotnet"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Command-line downloader for image-hosting site galleries and collections
+brew "gallery-dl"
+# WebDriver <-> Marionette proxy
+brew "geckodriver"
+# Blazing fast terminal-ui for git written in rust
+brew "gitui"
+# Render markdown on the CLI
+brew "glow"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
+# Fast, Dynamic Programming Language
+brew "julia"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Next-gen compiler infrastructure
+brew "llvm"
+# Powerful, lightweight programming language
+brew "lua"
+# Package manager for the Lua programming language
+brew "luarocks"
+# Small build system for use with gyp or CMake
+brew "ninja"
+# Command-line music player client for mpd
+brew "mpc"
+# Music Player Daemon
+brew "mpd"
+# Incremental parsing library
+brew "tree-sitter"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Ncurses based sudoku game
+brew "nudoku"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# General-purpose scripting language
+brew "php"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Terminal based Media Player Client with album art support
+brew "rmpc"
+# Experimental Rust compiler front-end for IDEs
+brew "rust-analyzer"
+# Rust toolchain installer
+brew "rustup"
+# Build tool for Scala projects
+brew "sbt"
+# Implementation of the STUN protocol
+brew "stuntman"
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale"
+# Terminal UI for tshark, inspired by Wireshark
+brew "termshark"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Parser generator tool
+brew "tree-sitter-cli"
+# Markup-based typesetting system
+brew "typst"
+# Terminal spreadsheet multitool for discovering and arranging data
+brew "visidata"
+# Your favorite rust -> wasm workflow tool!
+brew "wasm-pack"
+# Internet file retriever
+brew "wget"
+# Terminal Excel viewer with an interactive TUI
+brew "xleak"
+# Simple hotkey-daemon for macOS.
+brew "asmvik/formulae/skhd", trusted: true
+# GTKWave
+brew "randomplum/gtkwave/gtkwave", args: ["HEAD"], trusted: true
+# GPU-accelerated terminal emulator
+cask "alacritty"
+# 3D creation suite
+cask "blender"
+# Voice and text chat software
+cask "discord"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
+# Utility that prevents the system from going to sleep
+cask "domzilla-caffeine"
+# Web browser
+cask "firefox"
+cask "font-iosevka"
+cask "font-iosevka-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+# Free and open-source image editor
+cask "gimp"
+# Free and open-source media player
+cask "iina"
+# Electronics design automation suite
+cask "kicad"
+# Free cross-platform office suite, fresh version
+cask "libreoffice"
+# Framework for development on BLE devices
+cask "nrf-connect"
+# Open-source software for live streaming and screen recording
+cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# PDF reader and note-taking application
+cask "skim"
+# Video game digital distribution service
+cask "steam"
+# Kart racing game
+cask "supertuxkart"
+# Native desktop client for WhatsApp
+cask "whatsapp"
+cargo "cargo-watch"
+cargo "wasm-bindgen-cli"
+cargo "wasm-pack"
+npm "shareslide"
+npm "slidesdownloader"
+npm "twt-dl-cli"
