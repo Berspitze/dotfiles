@@ -71,6 +71,7 @@ alias rmusic='yt-dlp -f "bestaudio" --extract-audio --audio-format flac --audio-
 alias dtwt='npx twt-dl-cli@latest'
 alias wgetpage='wget --mirror --convert-links --adjust-extension --page-requisites --no-parent'
 alias glow='glow -p'
+alias yt-mp4='yt-dlp -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]" --merge-output-format mp4'
 
 # -- Git Prompt --
 autoload -Uz vcs_info

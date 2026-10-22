@@ -3,19 +3,20 @@ return {
     ft = { "scala", "sbt", "java" },
     dependencies = {
         "nvim-lua/plenary.nvim",
-        "nvim-telescope/telescope.nvim",
         "saghen/blink.cmp",
         "mfussenegger/nvim-dap",
     },
+
     opts = function()
-        local metals_config = require("metals").bare_config()
+        local metals = require("metals")
+        local config = metals.bare_config()
 
-        metals_config.capabilities = require("blink.cmp").get_lsp_capabilities()
-        metals_config.init_options.statusBarProvider = "on"
-        metals_config.root_patterns = { "build.sbt", "build.sc", "build.gradle", "pom.xml", ".git" }
+        config.capabilities =
+            require("blink.cmp").get_lsp_capabilities()
 
-        metals_config.settings = {
-            verboseCompilation = false,
+        config.init_options.statusBarProvider = "on"
+
+        config.settings = {
             showImplicitArguments = true,
             showImplicitConversionsAndClasses = true,
             showInferredType = true,
@@ -28,25 +29,41 @@ return {
             },
         }
 
-        metals_config.on_attach = function(client, bufnr)
+        config.on_attach = function(client, bufnr)
+            vim.notify(
+                "Metals attached: " .. client.name,
+                vim.log.levels.INFO
+            )
+
             local opts = { buffer = bufnr, silent = true }
-            vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-            vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-            vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-            vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+
+            vim.keymap.set("n", "gd",
+                vim.lsp.buf.definition, opts)
+            vim.keymap.set("n", "gr",
+                vim.lsp.buf.references, opts)
+            vim.keymap.set("n", "K",
+                vim.lsp.buf.hover, opts)
+            vim.keymap.set("n", "<leader>rn",
+                vim.lsp.buf.rename, opts)
+
             require("metals").setup_dap()
         end
 
-        return metals_config
+        return config
     end,
-    config = function(self, metals_config)
-        local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+
+    config = function(_, config)
+        local group = vim.api.nvim_create_augroup(
+            "nvim-metals", { clear = true }
+        )
+
         vim.api.nvim_create_autocmd("FileType", {
-            pattern = self.ft,
+            group = group,
+            pattern = { "scala", "sbt", "java" },
             callback = function()
-                require("metals").initialize_or_attach(metals_config)
+                require("metals").initialize_or_attach(config)
             end,
-            group = nvim_metals_group,
         })
     end,
 }
+
