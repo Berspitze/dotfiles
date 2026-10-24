@@ -8,10 +8,10 @@ return {
 				name = "personal",
 				path = "~/Documents/Obsidian Vault/personal/",
 			},
-			{
-				name = "work",
-				path = "~/Documents/Obsidian Vault/work",
-			},
+			-- {
+			-- 	name = "work",
+			-- 	path = "~/Documents/Obsidian Vault/work",
+			-- },
 		},
 	},
 }
