@@ -51,7 +51,9 @@ if command -v pyenv >/dev/null 2>&1; then
 fi
 
 # -- Java / Scala --
-export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
+# export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
+export JAVA_HOME=$(/usr/libexec/java_home -v 21)
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # -- macOS / Build Tools --
 export LDFLAGS="-L/opt/homebrew/lib"
