@@ -19,6 +19,28 @@ persistent-workspaces = [
     "6", "7", "8", "9"
 ]
 
+# floating windows
+# aerospace list-windows --all --format '%{app-bundle-id} | %{app-name} | %{window-title}'
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Passwords'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.valvesoftware.steam.helper'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'layout floating'
+
 # Gaps
 [gaps]
 inner.horizontal = 8
