@@ -41,6 +41,10 @@ run = 'layout floating'
 if.app-id = 'com.apple.MobileSMS'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-name-regex-substring = "app"
+run = ["layout floating"]
+
 # Gaps
 [gaps]
 inner.horizontal = 8
